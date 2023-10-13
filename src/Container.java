@@ -81,6 +81,10 @@ public class Container<T> {
             return removedData;
     }
 
+    /**
+     * Переопределение метода toString() для представления объекта в виде строки
+     * @return Строковое представления объекта в виде "el, el2, ..."
+     */
     @Override
     public String toString() {
         StringBuilder result=new StringBuilder();
@@ -94,6 +98,12 @@ public class Container<T> {
         return result.toString();
     }
 
+    /**
+     * Переопределение метода equals() для сравнения объектов Container
+     * Два эл-та считаются равными, если они имеют одинаковый размер и содержат элементы, равные по содержимому и расположенные в том же порядке
+     * @param obj - Объект для сравнения
+     * @return true, если объекты равны, false - иначе
+     */
     @Override
     public boolean equals(Object obj) {
         if (this==obj) return true;
@@ -113,6 +123,10 @@ public class Container<T> {
         return true;
     }
 
+    /**
+     * Переопределение метода hashCode() для вычисления хэш-кода объекта Container
+     * @return Хэш-код объекта
+     */
     @Override
     public int hashCode() {
         int hash=Objects.hash(size);
